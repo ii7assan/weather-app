@@ -51,11 +51,14 @@
 
 <script>
 import WeatherSearchInput from "../components/weatherSearchInput.vue";
-
+import {mapGetters} from 'vuex'
 export default {
   components: {
     WeatherSearchInput,
   },
+  computed: {
+      ...mapGetters({weatherData: 'getWeather'})
+  }
 };
 </script>
 

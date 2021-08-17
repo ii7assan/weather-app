@@ -30,5 +30,8 @@ export default new Vuex.Store({
         });
     },
   },
+  getters: {
+    getWeather: state => state.weather
+  },
   modules: {},
 });
