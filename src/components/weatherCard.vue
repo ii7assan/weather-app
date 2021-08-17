@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row justify="center">
-      <v-col  sm="12" md="6" lg="4" align="center">
+      <v-col sm="12" md="6" lg="4" align="center">
         <WeatherSearchInput width="400" />
       </v-col>
       <v-col cols="12" align="center">
@@ -51,29 +51,10 @@
 
 <script>
 import WeatherSearchInput from "../components/weatherSearchInput.vue";
-import axios from "axios";
+
 export default {
   components: {
     WeatherSearchInput,
-  },
-  data: () => ({
-    resp: "",
-    search: "qom",
-    token: "c",
-  }),
-  methods: {
-    getData() {
-      axios
-        .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${this.search}&appid=${this.token}`
-        )
-        .then((res) => {
-          console.log(res);
-        });
-    },
-  },
-  created() {
-    this.getData();
   },
 };
 </script>
