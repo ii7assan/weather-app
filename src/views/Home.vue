@@ -1,15 +1,14 @@
 <template>
-  <hello-world />
+    <WeatherCard />
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld";
-
+import WeatherCard from '../components/weatherCard.vue'
 export default {
   name: "Home",
 
   components: {
-    HelloWorld,
+    WeatherCard
   },
 };
 </script>
