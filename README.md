@@ -1,5 +1,6 @@
 # weatherapp
 
+just add openWeatherApi token in store index / state.token
 ## Project setup
 ```
 npm install
