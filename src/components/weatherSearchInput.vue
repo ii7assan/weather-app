@@ -1,17 +1,16 @@
 <template>
-<form @submit.prevent="search">
-<v-text-field
-    name="citySearch"
-    label="Weather of what city are you looking for?"
-    v-model="searchCity"
-    solo
-  ></v-text-field>
-</form>
-  
+  <form @submit.prevent="search">
+    <v-text-field
+      name="citySearch"
+      label="Weather of what city are you looking for?"
+      v-model="searchCity"
+      solo
+    ></v-text-field>
+  </form>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions } from "vuex";
 export default {
   computed: {
     searchCity: {
@@ -23,13 +22,15 @@ export default {
       },
     },
   },
+  created() {
+    this.search();
+  },
   methods: {
-      ...mapActions({
-          search: 'weatherNow'
-      }),
-  }
+    ...mapActions({
+      search: "weatherNow",
+    }),
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>
